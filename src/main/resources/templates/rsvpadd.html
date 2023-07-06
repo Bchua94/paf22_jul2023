@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New RSVP</title>
+  </head>
+  <body>
+    <h1>Add a new RSVP</h1>
+    <br />
+    <form action="#" th:action="@{/rsvps/saveRSVP}" th:object="${rsvp}" method="POST">
+      <div>
+        <label for="fullName">Full Name</label>
+        <br />
+        <input
+          type="text"
+          th:field="*{fullName}"
+          placeholder="Enter full name here..."
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email</label>
+        <br />
+        <input
+          type="email"
+          th:field="*{email}"
+          placeholder="Enter email address here..."
+        />
+      </div>
+      <br />
+      <div>
+        <label for="mobile">Mobile Number</label>
+        <br />
+        <input
+          type="number"
+          th:field="*{phone}"
+          placeholder="Enter mobile number here..."
+        />
+      </div>
+      <br />
+      <div>
+        <label for="ConfirmDate">Confirmation Date</label>
+        <br />
+        <input
+          type="date"
+          th:field="*{confirmationDate}"
+          placeholder="Enter Confirm Date here..."
+        />
+      </div>
+      <br />
+      <div>
+        <label for="content">Comments</label>
+        <br />
+        <input
+          type="text"
+          th:field="*{comment}"
+          placeholder="Enter Content here..."
+        />
+      </div>
+
+      <br /><br />
+      <button type="submit">Create</button>
+    </form>
+  </body>
+</html>
